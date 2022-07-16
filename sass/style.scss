@@ -1,0 +1,275 @@
+@import 'header';
+@import 'formsFooter';
+@import 'variables';
+
+* {
+    margin: 0%;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header "
+        "inicio "
+        "servicios "
+        "grupo-videos "
+        "final"
+        "footer";
+    grid-template-rows: 80px 760px 1220px 700px 622px 80px;
+}
+
+
+
+@media (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header "
+            "inicio "
+            "servicios "
+            "grupo-videos "
+            "final"
+            "footer";
+        grid-template-rows: 120px 400px 1600px 1150px 800px 80px;
+        max-width: 600px;
+    }
+}
+
+body {
+
+    .inicio {
+        grid-area: inicio;
+        background-image: url(../resources/img/web-dev-23-1024x545.png), linear-gradient(to top, whitesmoke, blue 50%, white);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+            width: 680px;
+            height: 340px;
+
+            div {
+                color: rgb(255, 255, 255);
+
+                h2 {
+                    font-weight: 700;
+                    line-height: 0.75em;
+                    text-align: left;
+                    margin-bottom: 15px;
+                }
+
+                h4 {
+                    font-weight: 400;
+                    line-height: 2em;
+                    text-align: left;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .btn {
+                    background-color: rgba(218, 219, 255, 0.61);
+                    color: black;
+                    border: 2px solid #ffffff;
+                    border-radius: 6px;
+                    padding: 16px 32px;
+                    margin-right: 20px;
+                    text-align: center;
+                    font-size: 16px;
+                    transition-duration: 0.4s;
+                    cursor: pointer;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+
+                .btn:hover {
+                    background-color: #1a65bb;
+                    color: white;
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 600px) {
+        .inicio {
+            max-width: 600px;
+            background-position: initial;
+            background-size: 600px;
+
+            div {
+                width: 450px;
+                height: 340px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin-top: 15px;
+
+                .inicio-texto {
+                    h2 {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+
+                    h4 {
+                        text-align: center;
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: -20px;
+
+                    .btn {
+                        padding: 16px 16px;
+                        margin-right: 10px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .servicios {
+        grid-area: servicios;
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "columna1 aside1"
+            " aside2 columna2";
+        grid-template-rows: 110px 550px 550px;
+        grid-template-columns: 550px 550px;
+        justify-content: center;
+        grid-gap: 0px 20px;
+        background: linear-gradient(to bottom,
+                whitesmoke,
+                rgb(179, 179, 179),
+                whitesmoke);
+
+        .titulo {
+            text-align: center;
+            text-decoration: underline;
+            grid-area: titulo;
+            align-self: center;
+            font-size: 35px;
+
+        }
+
+        .aside-servicios1 {
+            grid-area: aside1;
+            @include aside-services;
+
+            h2 {
+                margin: 15px 0px;
+            }
+        }
+
+        .column-servicios1 {
+            grid-area: columna1;
+
+            div {
+                @include box;
+
+                p {
+                    line-height: 1.3em;
+                    padding: 5px;
+                }
+            }
+        }
+
+        .column-servicios2 {
+            grid-area: columna2;
+
+            div {
+                @include box;
+
+                p {
+                    line-height: 1.3em;
+                    padding: 5px;
+                }
+            }
+        }
+
+        .aside-servicios2 {
+            grid-area: aside2; 
+            @include aside-services;
+            text-align: left;
+            h2 {
+                margin: 15px 0px;
+            }
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        .servicios {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+
+            .titulo {
+                margin: center 15px;
+            }
+
+            .aside-servicios1 {
+                margin-bottom: 45px;
+            }
+
+            .box-servicios {
+                width: 475px;
+                padding: 25px;
+            }
+        }
+    }
+
+    .grupo-videos {
+        grid-area: grupo-videos;
+        background-image: url(../resources/img/web-design-background-03-1024x347.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "video1 video2";
+        grid-template-columns: 700px 700px;
+        grid-template-rows: 80px 600px;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+
+        div:nth-child(1) {
+            margin: 40px;
+            text-align: center;
+            text-decoration: underline;
+            grid-area: titulo;
+
+            h2 {
+                margin-top: 45px;
+            }
+        }
+
+        div:nth-child(2) {
+            grid-area: video1;
+            @include videos;
+        }
+
+        div:nth-child(3) {
+            grid-area: video2;
+            @include videos;
+        }
+    }
+}

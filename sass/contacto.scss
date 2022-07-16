@@ -1,0 +1,42 @@
+@import 'header';
+@import 'formsFooter';
+@import 'variables';
+
+* {
+    margin: 0%;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom,rgb(216, 216, 216),whitesmoke 80%, rgb(197, 195, 195));
+    .inicio {
+        text-align: center;
+        margin-top: 150px;
+padding: 25px;
+        p {padding: 40px;
+            font-size: 25px;
+        }
+    }
+
+    .boxes {
+        margin: 100px;
+        display: flex;
+        justify-content: space-evenly;
+
+        .box {
+            background-color: #cac7c7b9;
+            min-width: 250px;
+            height: 340px;
+            text-align: center;
+            padding: 30px;
+            display: grid;
+            justify-items: center;
+            margin: 25px;
+            border-radius: 5px;
+
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+}
