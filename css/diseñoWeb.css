@@ -138,19 +138,19 @@ p {
   text-decoration: underline;
   margin: 20px;
   text-align: center;
-  color: rgb(58, 57, 57);
+  color: rgb(15, 15, 15);
 }
 .final div .text-inicio-final h3 {
   font-weight: 600;
   margin: 20px;
   text-align: center;
-  color: rgb(58, 57, 57);
+  color: rgb(15, 15, 15);
 }
 .final div .text-inicio-final p {
   line-height: 25px;
   margin: 20px;
   text-align: center;
-  color: rgb(58, 57, 57);
+  color: rgb(8, 8, 8);
 }
 .final div .form-inicio-final form {
   width: 600px;
@@ -312,245 +312,241 @@ p {
   padding: 0;
 }
 
-.grid-container {
+body {
   display: grid;
-  grid-template-areas: "header " "inicio " "servicios " "grupo-videos " "final" "footer";
-  grid-template-rows: 80px 760px 1220px 700px 622px 80px;
+  grid-template-areas: "header" "inicio" "boxes" "servicios" "final1" "final" "footer";
+  grid-template-rows: 65px 506px 440px 700px 600px 600px 66px;
 }
-
 @media (max-width: 600px) {
-  .grid-container {
+  body body {
     display: grid;
-    grid-template-areas: "header " "inicio " "servicios " "grupo-videos " "final" "footer";
-    grid-template-rows: 120px 400px 1600px 1150px 800px 80px;
-    max-width: 600px;
+    grid-template-areas: "header" "inicio" "boxes" "servicios" "final1" "final" "footer";
+    grid-template-rows: 120px 430px 1100px 1350px 500px 800px 66px;
   }
 }
 body .inicio {
   grid-area: inicio;
-  background-image: url(../resources/img/web-dev-23-1024x545.png), linear-gradient(to top, whitesmoke, blue 50%, white);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9)), url("../resources/img/web-design-background-03-1024x347.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-content: center;
-}
-body .inicio div {
-  display: flex;
-  flex-direction: column;
-  margin-top: 80px;
-  width: 680px;
-  height: 340px;
-}
-body .inicio div div {
-  color: rgb(255, 255, 255);
-}
-body .inicio div div h2 {
-  font-weight: 700;
-  line-height: 0.75em;
-  text-align: left;
-  margin-bottom: 15px;
-}
-body .inicio div div h4 {
-  font-weight: 400;
-  line-height: 2em;
-  text-align: left;
-}
-body .inicio div .buttons {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body .inicio div .buttons .btn {
-  background-color: rgba(218, 219, 255, 0.61);
-  color: black;
-  border: 2px solid #ffffff;
-  border-radius: 6px;
-  padding: 16px 32px;
-  margin-right: 20px;
+body .inicio div {
+  height: 257px;
+  width: 600px;
   text-align: center;
-  font-size: 16px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-body .inicio div .buttons .btn:hover {
-  background-color: #1a65bb;
-  color: white;
 }
 @media (max-width: 600px) {
   body .inicio {
     max-width: 600px;
-    background-position: initial;
-    background-size: 600px;
+    background-size: 1100px;
+    margin-top: 50px;
+    align-items: flex-start;
   }
   body .inicio div {
-    width: 450px;
-    height: 340px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 15px;
-  }
-  body .inicio div .inicio-texto h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  body .inicio div .inicio-texto h4 {
-    text-align: center;
-  }
-  body .inicio div .buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: -20px;
-  }
-  body .inicio div .buttons .btn {
-    padding: 16px 16px;
-    margin-right: 10px;
-    font-size: 12px;
+    max-width: 500px;
+    margin-top: 50px;
   }
 }
-body .servicios {
-  grid-area: servicios;
-  display: grid;
-  grid-template-areas: "titulo titulo" "columna1 aside1" " aside2 columna2";
-  grid-template-rows: 110px 550px 550px;
-  grid-template-columns: 550px 550px;
-  justify-content: center;
-  grid-gap: 0px 20px;
-  background: linear-gradient(to bottom, whitesmoke, rgb(179, 179, 179), whitesmoke);
+body .boxes {
+  grid-area: boxes;
+  display: flex;
+  justify-content: space-evenly;
 }
-body .servicios .titulo {
+body .boxes .box-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  height: 320px;
   text-align: center;
-  text-decoration: underline;
-  grid-area: titulo;
-  align-self: center;
-  font-size: 35px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #2d77a2;
 }
-body .servicios .aside-servicios1 {
-  grid-area: aside1;
-  line-height: 1.3em;
-  margin-left: 25px;
-  margin-top: 20px;
-  text-align: left;
+body .boxes .box-1 img {
+  height: 80px;
+  width: 80px;
 }
-body .servicios .aside-servicios1 h2 {
-  margin: 15px 0px;
+body .boxes .box-1 button {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border-color: #3985b1;
+  width: 80px;
 }
-body .servicios .column-servicios1 {
-  grid-area: columna1;
+body .boxes .box-1 h3 {
+  margin-bottom: 0px;
 }
-body .servicios .column-servicios1 div {
-  border: 1px solid #959596;
-  padding: 15px 15px;
-  margin: 10px;
-  max-width: 100%;
+body .boxes .box-1 p {
+  margin: 5px;
+  font-weight: 500;
+}
+body .boxes .box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  height: 320px;
   text-align: center;
-  background: none;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #2d77a2;
 }
-body .servicios .column-servicios1 div p {
-  line-height: 1.3em;
-  padding: 5px;
+body .boxes .box-2 img {
+  height: 80px;
+  width: 80px;
 }
-body .servicios .column-servicios2 {
-  grid-area: columna2;
+body .boxes .box-2 button {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border-color: #3985b1;
+  width: 80px;
 }
-body .servicios .column-servicios2 div {
-  border: 1px solid #959596;
-  padding: 15px 15px;
-  margin: 10px;
-  max-width: 100%;
+body .boxes .box-2 h3 {
+  margin-bottom: 0px;
+}
+body .boxes .box-2 p {
+  margin: 5px;
+  font-weight: 500;
+}
+body .boxes .box-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  height: 320px;
   text-align: center;
-  background: none;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #2d77a2;
 }
-body .servicios .column-servicios2 div p {
-  line-height: 1.3em;
-  padding: 5px;
+body .boxes .box-3 img {
+  height: 80px;
+  width: 80px;
 }
-body .servicios .aside-servicios2 {
-  grid-area: aside2;
-  line-height: 1.3em;
-  margin-left: 25px;
-  margin-top: 20px;
-  text-align: left;
-  text-align: left;
+body .boxes .box-3 button {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border-color: #3985b1;
+  width: 80px;
 }
-body .servicios .aside-servicios2 h2 {
-  margin: 15px 0px;
+body .boxes .box-3 h3 {
+  margin-bottom: 0px;
+}
+body .boxes .box-3 p {
+  margin: 5px;
+  font-weight: 500;
 }
 @media (max-width: 600px) {
-  body .servicios {
-    display: flex;
+  body .boxes {
+    max-width: 600px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .box-1,
+body .box-2,
+body .box-3 {
+    width: 320px;
+    margin: 5px;
+  }
+  body .box-1 p,
+body .box-2 p,
+body .box-3 p {
+    font-size: 16px;
+  }
+  body .box-1 button,
+body .box-2 button,
+body .box-3 button {
+    font-size: 16px;
+    width: 100px;
+  }
+}
+body .section-servicios {
+  grid-area: servicios;
+  display: flex;
+  color: whitesmoke;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #205b7e, #17445e, #85c6ec);
+}
+body .section-servicios .titulo-servicios {
+  text-align: center;
+  width: 600px;
+  align-self: center;
+  padding-bottom: 50px;
+}
+body .section-servicios .titulo-servicios h2 {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+body .section-servicios .titulo-servicios p {
+  line-height: 20px;
+}
+body .section-servicios .fila-servicios {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+body .section-servicios .fila-servicios div {
+  width: 350px;
+  height: 200px;
+}
+body .section-servicios .fila-servicios div h3 {
+  margin-bottom: 10px;
+}
+body .section-servicios .fila-servicios div p {
+  line-height: 20px;
+}
+@media (max-width: 600px) {
+  body .container-servicios {
+    max-width: 600px;
+  }
+  body .fila-servicios {
     flex-direction: column;
     align-items: center;
-    max-width: 100%;
+    height: 500px;
+    margin-bottom: 15px;
   }
-  body .servicios .titulo {
-    margin: center 15px;
+  body .fila-servicios p {
+    font-size: 18px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
-  body .servicios .aside-servicios1 {
-    margin-bottom: 45px;
-  }
-  body .servicios .box-servicios {
-    width: 475px;
-    padding: 25px;
+  body .fila-servicios h1 {
+    text-decoration: underline;
   }
 }
-body .grupo-videos {
-  grid-area: grupo-videos;
-  background-image: url(../resources/img/web-design-background-03-1024x347.jpg);
+body .section-banner {
+  grid-area: final1;
+  background: url("../resources/img/web-design-01-1024x854.jpg");
+  background-size: 70%;
   background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  grid-template-areas: "titulo titulo" "video1 video2";
-  grid-template-columns: 700px 700px;
-  grid-template-rows: 80px 600px;
+  background-position: right;
+  padding-top: 100px;
+  text-align: left;
+}
+body .section-banner div {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  justify-items: center;
-  align-items: center;
+  margin-left: 150px;
 }
-body .grupo-videos div:nth-child(1) {
-  margin: 40px;
-  text-align: center;
-  text-decoration: underline;
-  grid-area: titulo;
+body .section-banner div h4 {
+  text-align: left;
+  margin: 20px 0;
 }
-body .grupo-videos div:nth-child(1) h2 {
-  margin-top: 45px;
-}
-body .grupo-videos div:nth-child(2) {
-  grid-area: video1;
-  width: 600px;
-  height: 410px;
-  border: 1px solid #707070;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(128, 128, 128, 0.1921568627);
-}
-body .grupo-videos div:nth-child(2) h3 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  text-align: center;
-  text-decoration: underline;
-}
-body .grupo-videos div:nth-child(3) {
-  grid-area: video2;
-  width: 600px;
-  height: 410px;
-  border: 1px solid #707070;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(128, 128, 128, 0.1921568627);
-}
-body .grupo-videos div:nth-child(3) h3 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  text-align: center;
-  text-decoration: underline;
-}/*# sourceMappingURL=style.css.map */
+body .section-banner div button {
+  width: 80px;
+  height: 25px;
+  margin-top: 20px;
+  background-color: whitesmoke;
+  border: 1px solid grey;
+  border-radius: 2px;
+}/*# sourceMappingURL=diseñoWeb.css.map */
